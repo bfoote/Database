@@ -52,7 +52,7 @@ public class DatabaseActivity extends Activity implements View.OnClickListener {
         String sWord = result.getString(1);
        
         Log.println(Log.DEBUG, TAG, sWord);
-       
+        result.close();
         
     }
     
@@ -77,7 +77,7 @@ public class DatabaseActivity extends Activity implements View.OnClickListener {
     	startManagingCursor(result);
     	result.close();
     	Log.println(Log.DEBUG, TAG, "DeleteAll");
-
+        result.close();
     }
     
     private void ShowWords()
@@ -92,6 +92,7 @@ public class DatabaseActivity extends Activity implements View.OnClickListener {
     		Log.println(Log.DEBUG, TAG, word + " (" + id + ")");
     	        
     	}
+        cursor.close();
     }
     
     @Override
