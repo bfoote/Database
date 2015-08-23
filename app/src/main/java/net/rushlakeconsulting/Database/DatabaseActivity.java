@@ -77,7 +77,7 @@ public class DatabaseActivity extends Activity implements View.OnClickListener {
 
     	// startManagingCursor(result);
 
-    	result.close();
+    	result.close();  //Comment
     	Log.println(Log.DEBUG, TAG, "DeleteAll");
         result.close();
     }
