@@ -74,7 +74,7 @@ public class DatabaseActivity extends Activity implements View.OnClickListener {
     private void DeleteWords()
     {
     	Cursor result = db.rawQuery("delete from words;",null);
-    	startManagingCursor(result);
+    	//startManagingCursor(result);
     	result.close();
     	Log.println(Log.DEBUG, TAG, "DeleteAll");
         result.close();
@@ -83,7 +83,7 @@ public class DatabaseActivity extends Activity implements View.OnClickListener {
     private void ShowWords()
     {
     	Cursor cursor = db.query("Words",null, null, null, null, null, null);
-    	startManagingCursor(cursor);
+    	//startManagingCursor(cursor);
 
     	while (cursor.moveToNext())
     	{
